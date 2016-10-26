@@ -1,0 +1,14 @@
+0001 brussell 2
+0002 wlifferth 2
+0003 hclinton 1
+0004 dtrump 1
+0005 gjohnson 2
+0006 jstein 1
+0007 emcmullin 1
+0008 rdelafuente 1
+0009 mkaine 1
+0010 mpence 1
+0011 wweld 2
+0012 abaraka 1
+0013 mfinn 1
+0014 msteinberg 1

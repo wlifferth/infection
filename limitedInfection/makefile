@@ -1,2 +1,2 @@
-all: limitedInfection.cpp userNode.cpp; \
-g++ -o limitedInfection limitedInfection.cpp userNode.cpp;
+all: limitedInfection.cpp ../userNode.cpp; \
+g++ -o limitedInfection limitedInfection.cpp ../userNode.cpp;

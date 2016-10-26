@@ -1,0 +1,80 @@
+BEFORE INFECTION
+
+Name:   brussell	ID: 0001	Version: 01
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name:  wlifferth	ID: 0002	Version: 01
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name:   hclinton	ID: 0003	Version: 01
+Students ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 01
+
+
+Name:     dtrump	ID: 0004	Version: 01
+Teachers ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 01
+
+
+Name:   gjohnson	ID: 0005	Version: 01
+Students ------------------------------------------
+Name:     jstein	ID: 0006	Version: 01
+
+
+Name:     jstein	ID: 0006	Version: 01
+Teachers ------------------------------------------
+Name:   gjohnson	ID: 0005	Version: 01
+
+
+Name:  emcmullin	ID: 0007	Version: 01
+Students ------------------------------------------
+Name: rdelafuente	ID: 0008	Version: 01
+
+
+Name: rdelafuente	ID: 0008	Version: 01
+Teachers ------------------------------------------
+Name:  emcmullin	ID: 0007	Version: 01
+
+
+Name:     mkaine	ID: 0009	Version: 01
+Students ------------------------------------------
+Name:     mpence	ID: 0010	Version: 01
+
+
+Name:     mpence	ID: 0010	Version: 01
+Teachers ------------------------------------------
+Name:     mkaine	ID: 0009	Version: 01
+
+
+Name:      wweld	ID: 0011	Version: 01
+Students ------------------------------------------
+Name:    abaraka	ID: 0012	Version: 01
+
+
+Name:    abaraka	ID: 0012	Version: 01
+Teachers ------------------------------------------
+Name:      wweld	ID: 0011	Version: 01
+
+
+Name:      mfinn	ID: 0013	Version: 01
+Students ------------------------------------------
+Name: msteinberg	ID: 0014	Version: 01
+
+
+Name: msteinberg	ID: 0014	Version: 01
+Teachers ------------------------------------------
+Name:      mfinn	ID: 0013	Version: 01
+
+
+set: 1 size: 2
+set: 3 size: 2
+set: 5 size: 2
+set: 7 size: 2
+set: 9 size: 2
+set: 11 size: 2
+set: 13 size: 2
+ERROR: there is no way to infect exactly 7 without breaking a teacher/student relationship

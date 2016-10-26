@@ -1,0 +1,220 @@
+BEFORE INFECTION
+
+Name:   brussell	ID: 0001	Version: 01
+Teachers ------------------------------------------
+Name:     mkaine	ID: 0009	Version: 01
+Name:      wweld	ID: 0011	Version: 01
+Name:      mfinn	ID: 0013	Version: 01
+Students ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 01
+Name:     jstein	ID: 0006	Version: 01
+
+
+Name:  wlifferth	ID: 0002	Version: 01
+Teachers ------------------------------------------
+Name:     mpence	ID: 0010	Version: 01
+Name:    abaraka	ID: 0012	Version: 01
+Name: msteinberg	ID: 0014	Version: 01
+Students ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 01
+Name:   gjohnson	ID: 0005	Version: 01
+Name: rdelafuente	ID: 0008	Version: 01
+Name:  emcmullin	ID: 0007	Version: 01
+
+
+Name:   hclinton	ID: 0003	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+Students ------------------------------------------
+Name:     mkaine	ID: 0009	Version: 01
+
+
+Name:     dtrump	ID: 0004	Version: 01
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+Students ------------------------------------------
+Name:     mpence	ID: 0010	Version: 01
+
+
+Name:   gjohnson	ID: 0005	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+Students ------------------------------------------
+Name:      wweld	ID: 0011	Version: 01
+
+
+Name:     jstein	ID: 0006	Version: 01
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+Students ------------------------------------------
+Name:    abaraka	ID: 0012	Version: 01
+
+
+Name:  emcmullin	ID: 0007	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+Students ------------------------------------------
+Name:      mfinn	ID: 0013	Version: 01
+
+
+Name: rdelafuente	ID: 0008	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+Students ------------------------------------------
+Name: msteinberg	ID: 0014	Version: 01
+
+
+Name:     mkaine	ID: 0009	Version: 01
+Teachers ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 01
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name:     mpence	ID: 0010	Version: 01
+Teachers ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 01
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name:      wweld	ID: 0011	Version: 01
+Teachers ------------------------------------------
+Name:   gjohnson	ID: 0005	Version: 01
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name:    abaraka	ID: 0012	Version: 01
+Teachers ------------------------------------------
+Name:     jstein	ID: 0006	Version: 01
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name:      mfinn	ID: 0013	Version: 01
+Teachers ------------------------------------------
+Name:  emcmullin	ID: 0007	Version: 01
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name: msteinberg	ID: 0014	Version: 01
+Teachers ------------------------------------------
+Name: rdelafuente	ID: 0008	Version: 01
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+
+
+
+AFTER INFECTION
+User 0014 was updated to version 02, and everone connected to that user was upgraded as well
+
+Name:   brussell	ID: 0001	Version: 02
+Teachers ------------------------------------------
+Name:     mkaine	ID: 0009	Version: 02
+Name:      wweld	ID: 0011	Version: 02
+Name:      mfinn	ID: 0013	Version: 02
+Students ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 02
+Name:     jstein	ID: 0006	Version: 02
+
+
+Name:  wlifferth	ID: 0002	Version: 02
+Teachers ------------------------------------------
+Name:     mpence	ID: 0010	Version: 02
+Name:    abaraka	ID: 0012	Version: 02
+Name: msteinberg	ID: 0014	Version: 02
+Students ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 02
+Name:   gjohnson	ID: 0005	Version: 02
+Name: rdelafuente	ID: 0008	Version: 02
+Name:  emcmullin	ID: 0007	Version: 02
+
+
+Name:   hclinton	ID: 0003	Version: 02
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+Students ------------------------------------------
+Name:     mkaine	ID: 0009	Version: 02
+
+
+Name:     dtrump	ID: 0004	Version: 02
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 02
+Students ------------------------------------------
+Name:     mpence	ID: 0010	Version: 02
+
+
+Name:   gjohnson	ID: 0005	Version: 02
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+Students ------------------------------------------
+Name:      wweld	ID: 0011	Version: 02
+
+
+Name:     jstein	ID: 0006	Version: 02
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 02
+Students ------------------------------------------
+Name:    abaraka	ID: 0012	Version: 02
+
+
+Name:  emcmullin	ID: 0007	Version: 02
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+Students ------------------------------------------
+Name:      mfinn	ID: 0013	Version: 02
+
+
+Name: rdelafuente	ID: 0008	Version: 02
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+Students ------------------------------------------
+Name: msteinberg	ID: 0014	Version: 02
+
+
+Name:     mkaine	ID: 0009	Version: 02
+Teachers ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 02
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 02
+
+
+Name:     mpence	ID: 0010	Version: 02
+Teachers ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 02
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+
+
+Name:      wweld	ID: 0011	Version: 02
+Teachers ------------------------------------------
+Name:   gjohnson	ID: 0005	Version: 02
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 02
+
+
+Name:    abaraka	ID: 0012	Version: 02
+Teachers ------------------------------------------
+Name:     jstein	ID: 0006	Version: 02
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+
+
+Name:      mfinn	ID: 0013	Version: 02
+Teachers ------------------------------------------
+Name:  emcmullin	ID: 0007	Version: 02
+Students ------------------------------------------
+Name:   brussell	ID: 0001	Version: 02
+
+
+Name: msteinberg	ID: 0014	Version: 02
+Teachers ------------------------------------------
+Name: rdelafuente	ID: 0008	Version: 02
+Students ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 02
+
+

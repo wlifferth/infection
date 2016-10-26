@@ -1,0 +1,49 @@
+BEFORE INFECTION
+
+Name:   brussell	ID: 0001	Version: 01
+Students ------------------------------------------
+Name:     dtrump	ID: 0004	Version: 01
+Name:     jstein	ID: 0006	Version: 01
+
+
+Name:  wlifferth	ID: 0002	Version: 01
+Students ------------------------------------------
+Name:   hclinton	ID: 0003	Version: 01
+Name:   gjohnson	ID: 0005	Version: 01
+Name: rdelafuente	ID: 0008	Version: 01
+Name:  emcmullin	ID: 0007	Version: 01
+
+
+Name:   hclinton	ID: 0003	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name:     dtrump	ID: 0004	Version: 01
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name:   gjohnson	ID: 0005	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name:     jstein	ID: 0006	Version: 01
+Teachers ------------------------------------------
+Name:   brussell	ID: 0001	Version: 01
+
+
+Name:  emcmullin	ID: 0007	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+Name: rdelafuente	ID: 0008	Version: 01
+Teachers ------------------------------------------
+Name:  wlifferth	ID: 0002	Version: 01
+
+
+set: 1 size: 3
+set: 2 size: 5
+ERROR: there is no way to infect exactly 5 without breaking a teacher/student relationship

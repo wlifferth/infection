@@ -1,0 +1,113 @@
+BEFORE INFECTION
+
+Name:         aa	ID: 0001	Version: 01
+Students ------------------------------------------
+Name:         ab	ID: 0002	Version: 01
+
+
+Name:         ab	ID: 0002	Version: 01
+Teachers ------------------------------------------
+Name:         aa	ID: 0001	Version: 01
+
+
+Name:         ac	ID: 0003	Version: 01
+Students ------------------------------------------
+Name:         ad	ID: 0004	Version: 01
+Name:         ae	ID: 0005	Version: 01
+Name:         af	ID: 0006	Version: 01
+
+
+Name:         ad	ID: 0004	Version: 01
+Teachers ------------------------------------------
+Name:         ac	ID: 0003	Version: 01
+
+
+Name:         ae	ID: 0005	Version: 01
+Teachers ------------------------------------------
+Name:         ac	ID: 0003	Version: 01
+
+
+Name:         af	ID: 0006	Version: 01
+Teachers ------------------------------------------
+Name:         ac	ID: 0003	Version: 01
+
+
+Name:         ag	ID: 0007	Version: 01
+Students ------------------------------------------
+Name:         ah	ID: 0008	Version: 01
+Name:         ai	ID: 0009	Version: 01
+Name:         aj	ID: 0010	Version: 01
+Name:         ak	ID: 0011	Version: 01
+Name:         al	ID: 0012	Version: 01
+
+
+Name:         ah	ID: 0008	Version: 01
+Teachers ------------------------------------------
+Name:         ag	ID: 0007	Version: 01
+
+
+Name:         ai	ID: 0009	Version: 01
+Teachers ------------------------------------------
+Name:         ag	ID: 0007	Version: 01
+
+
+Name:         aj	ID: 0010	Version: 01
+Teachers ------------------------------------------
+Name:         ag	ID: 0007	Version: 01
+
+
+Name:         ak	ID: 0011	Version: 01
+Teachers ------------------------------------------
+Name:         ag	ID: 0007	Version: 01
+
+
+Name:         al	ID: 0012	Version: 01
+Teachers ------------------------------------------
+Name:         ag	ID: 0007	Version: 01
+
+
+Name:         am	ID: 0013	Version: 01
+Students ------------------------------------------
+Name:         an	ID: 0014	Version: 01
+Name:         ao	ID: 0015	Version: 01
+Name:         ap	ID: 0016	Version: 01
+Name:         aq	ID: 0017	Version: 01
+Name:         ar	ID: 0018	Version: 01
+Name:         as	ID: 0019	Version: 01
+
+
+Name:         an	ID: 0014	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+Name:         ao	ID: 0015	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+Name:         ap	ID: 0016	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+Name:         aq	ID: 0017	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+Name:         ar	ID: 0018	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+Name:         as	ID: 0019	Version: 01
+Teachers ------------------------------------------
+Name:         am	ID: 0013	Version: 01
+
+
+set: 1 size: 2
+set: 3 size: 4
+set: 7 size: 6
+set: 13 size: 7
+ERROR: there is no way to infect exactly 8 without breaking a teacher/student relationship

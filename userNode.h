@@ -1,3 +1,6 @@
+#ifndef _USERNODE_INCLUDED_
+#define _USERNODE_INCLUDED_
+
 #include <string>
 #include <vector>
 
@@ -30,3 +33,5 @@ class userNode
         vector<userNode*> teachers;
         vector<userNode*> students;
 };
+
+#endif

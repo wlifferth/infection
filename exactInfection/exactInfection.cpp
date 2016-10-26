@@ -3,13 +3,15 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <math.h>
 #include "../userNode.h"
-#include "../readInput.cpp"
+#include "recursiveSolver.h"
 
 using namespace std;
 
+
 // Reads in and parses the input from the two files, and stores all the data in the users map
-//void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename);
+void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename);
 // Deletes all the objects we created on the heap
 void cleanup(map<int, userNode*> users);
 // Prints the map of users; for each user it prints it, all its teachers, and all its students
@@ -17,11 +19,11 @@ void printUserMap(map<int, userNode*> users);
 // Prints a list of all users; similar to printUserMap except it only prints each user once
 void printUsers(map<int, userNode*> users);
 // Splits the users into discrete components; returns a vector of setIDs (the first userID in the set) and the respective set sizes
-void countSets(map<int, userNode*>& users, vector<int>& setIDs, vector<int>& setSizes);
+void countSets(map<int, userNode*>& users, map<int, int>& sets);
 // Recursive function to group components together; returns the size of the component including this one and past
 int recursiveCountSet(map<int, userNode*>& users, int setID);
-// Infects users in whole components to get as close as possible without going over the maxUsersInfected argument
-void infect(map<int, userNode*>& users, int maxUsersInfected, int newVersion);
+// Infects users in whole components to get as close as possible without going over the target argument
+void infect(map<int, userNode*>& users, int target, int newVersion);
 // Changes the version of this user and all the users connected to it
 void recursiveInfect(userNode* user, int version);
 
@@ -30,24 +32,24 @@ int main(int argc, char** argv)
     char buffer[1000];
     string userFile;
     string connectionFile;
-    int maxUsersInfected;
+    int target;
     int newVersion;
     // maps userID numbers to userNode pointers
     map<int, userNode*> users;
-   
+
     // Lets get that command line input!
     if(argc != 5)
     {
-        printf("USAGE: userFile connectionFile maxUsersInfected newVersion");
+        printf("USAGE: userFile connectionFile target newVersion");
         exit(1);
     }
     sscanf(argv[1], "%s", buffer);
     userFile = buffer;
     sscanf(argv[2], "%s", buffer);
     connectionFile = buffer;
-    sscanf(argv[3], "%d", &maxUsersInfected);
+    sscanf(argv[3], "%d", &target);
     sscanf(argv[4], "%d", &newVersion);
-    
+
     // Now that we know where stuff is we can grab the data and put it gently into our users map
     readInput(users, userFile, connectionFile);
 
@@ -55,7 +57,7 @@ int main(int argc, char** argv)
     printf("BEFORE INFECTION\n\n");
     printUserMap(users);
 
-    infect(users, maxUsersInfected, newVersion);
+    infect(users, target, newVersion);
 
     printf("\n\n\n");
     printf("AFTER INFECTION\n");
@@ -65,53 +67,28 @@ int main(int argc, char** argv)
     return 0;
 }
 
-void infect(map<int, userNode*>& users, int maxUsersInfected, int newVersion)
+void infect(map<int, userNode*>& users, int target, int newVersion)
 {
-    int i;
-    vector<int> setIDs;
-    vector<int> setSizes;
-    // Variables for our greedy optimization algorithm
+    int i, j;
     vector<int> setsToInfect;
-    int currentBestFit;
-    int currentBestFitSize;
-    int totalInfected = 0;
-    bool gettingCloser = true;
+    map<int, int> sets;
+    map<int, int>::iterator iter;
     // This will count all the components in the users map via a disjoint-set like algorithm
     // The setIDs carries the IDs for each set (which is the userID of the first element in a new set) and at the same index setSizes carries the size of that set
-    countSets(users, setIDs, setSizes);
-
-    // I know enough to know that this is a greedy algorithm, but I don't know enough to know how to make it better
-    while(gettingCloser)
+    countSets(users, sets);
+    for(iter = sets.begin(); iter != sets.end(); iter++) printf("set: %d size: %d\n", iter->first, iter->second);
+    
+    // Create a recursiveSolver object
+    recursiveSolver solver = recursiveSolver(sets, target);
+    // Now recursively solve to see if theres a solution that matches target
+    if(!solver.recursiveSolve())
     {
-        // If we run through the entire list without being able to add a new set, then we're done
-        gettingCloser = false;
-        currentBestFitSize = 0;
-        for(i = 0; i < setSizes.size(); i++)
-        {
-            if(setSizes[i] <= maxUsersInfected - totalInfected && setSizes[i] > currentBestFitSize)
-            {
-                currentBestFit = i;
-                currentBestFitSize = setSizes[currentBestFit];
-                gettingCloser = true;
-            }
-        }
-        if(gettingCloser)
-        // If we came across a set we could add without going over, we add it to our list
-        {
-            setsToInfect.push_back(setIDs[currentBestFit]);
-            totalInfected += setSizes[currentBestFit];
-            setSizes[currentBestFit] = 0;
-            setIDs[currentBestFit] = 0;
-        }
-    }
-    if(totalInfected == 0)
-    // If we didn't find a single set we could add
-    {
-        printf("There's no way to infect that few people with out messing up the user experience--try picking a larger maxUsersInfected value.\n");
+        printf("ERROR: there is no way to infect exactly %d without breaking a teacher/student relationship\n", target);
         exit(1);
     }
+    setsToInfect = solver.getSetIDs();
     for(i = 0; i < setsToInfect.size(); i++) recursiveInfect(users[setsToInfect[i]], newVersion);
-
+    return;
 }
 
 int recursiveCountSet(userNode* user, int setID)
@@ -132,19 +109,15 @@ int recursiveCountSet(userNode* user, int setID)
     }
     return size;
 }
-    
-void countSets(map<int, userNode*>& users, vector<int>& setIDs, vector<int>& setSizes)
+
+void countSets(map<int, userNode*>& users, map<int, int>& sets)
 {
     map<int, userNode*>::iterator iter;
     int size;
     for(iter = users.begin(); iter != users.end(); iter++)
     {
         size = recursiveCountSet(iter->second, iter->first);
-        if(size)
-        {
-            setIDs.push_back(iter->first);
-            setSizes.push_back(size);
-        }
+        if(size) sets.insert(make_pair(iter->first, size));
     }
     return;
 }
@@ -167,7 +140,7 @@ void recursiveInfect(userNode* user, int version)
     }
     return;
 }
-/*
+
 void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename)
 {
     char buffer[1000];
@@ -215,7 +188,7 @@ void readInput(map<int, userNode*>& users, string userFilename, string connectio
         users[studentID]->addTeacher(users[teacherID]);
     }
 }
-*/
+
 void cleanup(map<int, userNode*> users)
 {
     map<int, userNode*>::iterator iter;
