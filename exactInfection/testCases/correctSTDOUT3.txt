@@ -70,11 +70,4 @@ Teachers ------------------------------------------
 Name:      mfinn	ID: 0013	Version: 01
 
 
-set: 1 size: 2
-set: 3 size: 2
-set: 5 size: 2
-set: 7 size: 2
-set: 9 size: 2
-set: 11 size: 2
-set: 13 size: 2
 ERROR: there is no way to infect exactly 7 without breaking a teacher/student relationship

@@ -1,5 +1,6 @@
 #include <map>
 #include <vector>
+#include <cstdio>
 
 
 #include "recursiveSolver.h"
@@ -15,12 +16,13 @@ recursiveSolver::recursiveSolver(map<int, int>& setsIn, int goalSizeIn)
 
 bool recursiveSolver::recursiveSolve()
 {
+    // If this is the end, we return one way or another
+    if(iter == sets.end()) return false;
     // Lets say this thing IS included
     setIDs.push_back(iter->first);
     runningSize += iter->second;
     if(runningSize == goalSize) return true;
-    // If this is the end, we return one way or another
-    if(iter == sets.end()) return false;
+    
     // On the next go around we want to evaluate the next entry
     iter++;
     // If there is a solution that includes this set, return true (preserving it's place in the stack)

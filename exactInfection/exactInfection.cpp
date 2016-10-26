@@ -5,13 +5,12 @@
 #include <map>
 #include <math.h>
 #include "../userNode.h"
+#include "../readInput.cpp"
 #include "recursiveSolver.h"
 
 using namespace std;
 
 
-// Reads in and parses the input from the two files, and stores all the data in the users map
-void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename);
 // Deletes all the objects we created on the heap
 void cleanup(map<int, userNode*> users);
 // Prints the map of users; for each user it prints it, all its teachers, and all its students
@@ -76,7 +75,6 @@ void infect(map<int, userNode*>& users, int target, int newVersion)
     // This will count all the components in the users map via a disjoint-set like algorithm
     // The setIDs carries the IDs for each set (which is the userID of the first element in a new set) and at the same index setSizes carries the size of that set
     countSets(users, sets);
-    for(iter = sets.begin(); iter != sets.end(); iter++) printf("set: %d size: %d\n", iter->first, iter->second);
     
     // Create a recursiveSolver object
     recursiveSolver solver = recursiveSolver(sets, target);
@@ -139,54 +137,6 @@ void recursiveInfect(userNode* user, int version)
         recursiveInfect(students[i], version);
     }
     return;
-}
-
-void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename)
-{
-    char buffer[1000];
-    int userID;
-    char userNameBuffer[1000];
-    string userName;
-    int version;
-    userNode* newUser;
-    int teacherID;
-    int studentID;
-    // Validate user input
-    FILE* userFile = fopen(userFilename.c_str(), "r");
-    if(userFile == NULL)
-    {
-        printf("USAGE: supplied user filename does not exist\n");
-        exit(1);
-    }
-    FILE* connectionFile = fopen(connectionsFilename.c_str(), "r");
-    if(connectionFile == NULL)
-    {
-        printf("USAGE: supplied connection filename does not exist\n");
-        exit(1);
-    }
-    // Now we can go and read input
-    // First we'll get all the users from the userFile
-    while(fgets(buffer, 1000, userFile))
-    {
-        // Read in the line
-        sscanf(buffer, "%d %s %d", &userID, userNameBuffer, &version);
-        // stick the c string in a c++ string
-        userName = userNameBuffer;
-        // create a userNode object
-        newUser = new userNode(userID, userName, version);
-        // stick the user into our users map, keyed on userID
-        users.insert(make_pair(newUser->getUserID(), newUser));
-    }
-    // Now we'll get all the connection from connectionsFile
-    while(fgets(buffer, 1000, connectionFile))
-    {
-        // Read in the line
-        sscanf(buffer, "%d %d", &teacherID, &studentID);
-        // Add the student to the teachers student list
-        users[teacherID]->addStudent(users[studentID]);
-        // Add the teacher to the students teacher list
-        users[studentID]->addTeacher(users[teacherID]);
-    }
 }
 
 void cleanup(map<int, userNode*> users)

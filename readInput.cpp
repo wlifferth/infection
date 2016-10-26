@@ -1,8 +1,13 @@
+#ifndef _READINPU_CPP_IS_DEFINED_
+#define _READINPU_CPP_IS_DEFINED_
+
 #include <cstdio>
 #include <cstdlib>
 #include <string>
 #include <map>
 #include "userNode.h"
+
+using namespace std;
 
 void readInput(map<int, userNode*>& users, string userFilename, string connectionsFilename)
 {
@@ -51,3 +56,5 @@ void readInput(map<int, userNode*>& users, string userFilename, string connectio
         users[studentID]->addTeacher(users[teacherID]);
     }
 }
+
+#endif

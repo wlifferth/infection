@@ -44,8 +44,6 @@ Teachers ------------------------------------------
 Name:  wlifferth	ID: 0002	Version: 01
 
 
-set: 1 size: 3
-set: 2 size: 5
 
 
 

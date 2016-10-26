@@ -166,17 +166,39 @@ Teachers ------------------------------------------
 Name:         ba	ID: 0027	Version: 01
 
 
-set: 1 size: 2
-set: 3 size: 2
-set: 5 size: 2
-set: 7 size: 2
-set: 9 size: 2
-set: 11 size: 2
-set: 13 size: 2
-set: 15 size: 2
-set: 17 size: 2
-set: 19 size: 2
-set: 21 size: 3
-set: 24 size: 3
-set: 27 size: 6
-ERROR: there is no way to infect exactly 7 without breaking a teacher/student relationship
+
+
+
+AFTER INFECTION
+Name:         aa	ID: 0001	Version: 02
+Name:         ab	ID: 0002	Version: 02
+Name:         ac	ID: 0003	Version: 02
+Name:         ad	ID: 0004	Version: 02
+Name:         ae	ID: 0005	Version: 01
+Name:         af	ID: 0006	Version: 01
+Name:         ag	ID: 0007	Version: 01
+Name:         ah	ID: 0008	Version: 01
+Name:         ai	ID: 0009	Version: 01
+Name:         aj	ID: 0010	Version: 01
+Name:         ak	ID: 0011	Version: 01
+Name:         al	ID: 0012	Version: 01
+Name:         am	ID: 0013	Version: 01
+Name:         an	ID: 0014	Version: 01
+Name:         ao	ID: 0015	Version: 01
+Name:         ap	ID: 0016	Version: 01
+Name:         aq	ID: 0017	Version: 01
+Name:         ar	ID: 0018	Version: 01
+Name:         as	ID: 0019	Version: 01
+Name:         at	ID: 0020	Version: 01
+Name:         au	ID: 0021	Version: 02
+Name:         av	ID: 0022	Version: 02
+Name:         aw	ID: 0023	Version: 02
+Name:         ax	ID: 0024	Version: 01
+Name:         ay	ID: 0025	Version: 01
+Name:         az	ID: 0026	Version: 01
+Name:         ba	ID: 0027	Version: 01
+Name:         bb	ID: 0028	Version: 01
+Name:         bc	ID: 0029	Version: 01
+Name:         bd	ID: 0030	Version: 01
+Name:         be	ID: 0031	Version: 01
+Name:         bf	ID: 0032	Version: 01
